@@ -83,6 +83,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="ButtonOneText" destination="lCv-ob-bws" id="U7B-Pw-QaP"/>
+                        <outlet property="ButtonTwoText" destination="2uO-N4-jYu" id="MLA-Mj-th8"/>
                         <outlet property="MainText" destination="reI-Ou-8Mu" id="IGD-8h-yxn"/>
                     </connections>
                 </viewController>
