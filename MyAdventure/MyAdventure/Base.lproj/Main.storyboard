@@ -42,7 +42,7 @@
                                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="Options:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jzu-k6-oy3"/>
+                                                    <action selector="chooseChoice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7iG-FE-kM7"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2uO-N4-jYu">
@@ -54,9 +54,6 @@
                                                     </backgroundConfiguration>
                                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="Options:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Hd-dv-mjP"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>

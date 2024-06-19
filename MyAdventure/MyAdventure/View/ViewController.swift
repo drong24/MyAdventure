@@ -13,14 +13,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var ButtonOneText: UIButton!
     @IBOutlet weak var ButtonTwoText: UIButton!
     
+    var currentChoice = choices[0]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        // initializes choice tree
         addNodes()
-        MainText.text = choices[0].value.text
-        ButtonOneText.setTitle(choices[0].value.option_one, for: .normal)
-        ButtonTwoText.setTitle(choices[0].value.option_two, for: .normal)
-        
+        // displays root node text on screen
+        MainText.text = currentChoice.value.text
+        ButtonOneText.setTitle(currentChoice.value.option_one, for: .normal)
+        ButtonTwoText.setTitle(currentChoice.value.option_two, for: .normal)
+        /*
         var count = 0 ... choices.count - 1
         for i in count {
             print(choices[i].value.text)
@@ -30,9 +34,25 @@ class ViewController: UIViewController {
             print(choices[i].right?.value ?? "end")
             print("\n")
         }
+         */
     }
 
-    @IBAction func Options(_ sender: Any) {
+    @IBAction func chooseChoice(_ sender: UIButton) {
+        currentChoice = (sender.titleLabel?.text == currentChoice.value.option_one) ? currentChoice.left! : currentChoice.right!
+        
+        if (currentChoice.leaf == false) {
+            MainText.text = currentChoice.value.text
+            ButtonOneText.setTitle(currentChoice.value.option_one, for: .normal)
+            ButtonTwoText.setTitle(currentChoice.value.option_two, for: .normal)
+        }
+        else {
+            MainText.text = currentChoice.value.text
+            ButtonOneText.setTitle("end", for: .normal)
+            ButtonOneText.isEnabled = false
+            ButtonTwoText.setTitle("end", for: .normal)
+            ButtonTwoText.isEnabled = false
+        }
+
     }
 }
 
