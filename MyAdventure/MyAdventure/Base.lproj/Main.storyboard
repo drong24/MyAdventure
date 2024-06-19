@@ -20,23 +20,71 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <color key="backgroundColor" red="0.66666668653488159" green="0.56196482696176642" blue="0.2935862840699065" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reI-Ou-8Mu">
-                                <rect key="frame" x="164" y="164" width="42" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="g4z-zu-ABY">
+                                <rect key="frame" x="30" y="89" width="333" height="699"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reI-Ou-8Mu">
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="344.66666666666669"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qKu-Wm-eQW">
+                                        <rect key="frame" x="30" y="354.66666666666674" width="273" height="344.33333333333326"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCv-ob-bws">
+                                                <rect key="frame" x="0.0" y="0.0" width="273" height="167"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                                    <backgroundConfiguration key="background" strokeWidth="4">
+                                                        <color key="strokeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </backgroundConfiguration>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="Options:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jzu-k6-oy3"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2uO-N4-jYu">
+                                                <rect key="frame" x="0.0" y="176.99999999999994" width="273" height="167.33333333333331"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                                    <backgroundConfiguration key="background" strokeWidth="4">
+                                                        <color key="strokeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </backgroundConfiguration>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="Options:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Hd-dv-mjP"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="reI-Ou-8Mu" firstAttribute="leading" secondItem="g4z-zu-ABY" secondAttribute="leading" id="BvK-ee-qXO"/>
+                                    <constraint firstAttribute="trailing" secondItem="qKu-Wm-eQW" secondAttribute="trailing" constant="30" id="Seb-ub-JhV"/>
+                                    <constraint firstItem="qKu-Wm-eQW" firstAttribute="leading" secondItem="g4z-zu-ABY" secondAttribute="leading" constant="30" id="ZnE-c5-QoQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="reI-Ou-8Mu" secondAttribute="trailing" id="fne-Vy-mUm"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="g4z-zu-ABY" secondAttribute="trailing" constant="30" id="8My-Vr-KYa"/>
                             <constraint firstAttribute="trailing" secondItem="6Yx-Zo-L6r" secondAttribute="trailing" id="BNB-Be-RJs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="g4z-zu-ABY" secondAttribute="bottom" constant="30" id="VfD-2p-7JD"/>
                             <constraint firstAttribute="bottom" secondItem="6Yx-Zo-L6r" secondAttribute="bottom" id="Yt3-ou-ouD"/>
                             <constraint firstItem="6Yx-Zo-L6r" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Z3e-gB-SZW"/>
+                            <constraint firstItem="g4z-zu-ABY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="ZV3-ah-1me"/>
                             <constraint firstItem="6Yx-Zo-L6r" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lsm-Z1-Hle"/>
+                            <constraint firstItem="g4z-zu-ABY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="rIw-KH-QkX"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="MainText" destination="reI-Ou-8Mu" id="IGD-8h-yxn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
