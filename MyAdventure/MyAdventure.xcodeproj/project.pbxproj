@@ -15,6 +15,7 @@
 		ABBCEEB02C224D59000F808E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = ABBCEEAF2C224D59000F808E /* Base */; };
 		ABBCEEB82C2250CE000F808E /* Choice.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBCEEB72C2250CE000F808E /* Choice.swift */; };
 		ABBCEEBA2C2250E7000F808E /* StoryLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBCEEB92C2250E7000F808E /* StoryLogic.swift */; };
+		ABBCEEBE2C237F73000F808E /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBCEEBD2C237F73000F808E /* Node.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		ABBCEEB12C224D59000F808E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABBCEEB72C2250CE000F808E /* Choice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Choice.swift; sourceTree = "<group>"; };
 		ABBCEEB92C2250E7000F808E /* StoryLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryLogic.swift; sourceTree = "<group>"; };
+		ABBCEEBD2C237F73000F808E /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			children = (
 				ABBCEEB92C2250E7000F808E /* StoryLogic.swift */,
 				ABBCEEB72C2250CE000F808E /* Choice.swift */,
+				ABBCEEBD2C237F73000F808E /* Node.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 				ABBCEEA82C224D58000F808E /* ViewController.swift in Sources */,
 				ABBCEEA42C224D58000F808E /* AppDelegate.swift in Sources */,
 				ABBCEEBA2C2250E7000F808E /* StoryLogic.swift in Sources */,
+				ABBCEEBE2C237F73000F808E /* Node.swift in Sources */,
 				ABBCEEB82C2250CE000F808E /* Choice.swift in Sources */,
 				ABBCEEA62C224D58000F808E /* SceneDelegate.swift in Sources */,
 			);
