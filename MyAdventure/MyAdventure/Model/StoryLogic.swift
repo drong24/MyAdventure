@@ -7,8 +7,6 @@
 
 import Foundation
 
-struct StoryLogic {
-    
     let choices = [
         Node(Choice("You find yourself in a valley surrounded by green hills and wildflowers of all shapes and colors. As you walk through the valley, you hear a distant melody. Following the sound, you see a small sheep standing on a hill, singing a beautiful song.", "Approach the singing sheep", "Observe from a distance"), leaf: false),
         Node(Choice("You decide to approach the singing sheep, drawn in by its melody. As you get closer, the sheep suddenly notices you. Startled, it stops singing and looks at you with wide eyes. Before you can say anything, the sheep bolts away into the forest nearby.", "Follow the sheep", "Start singing"), leaf: false),
@@ -35,5 +33,5 @@ struct StoryLogic {
         print("GET ROOT" + (choices[0].right?.value.text ?? "None"))
         return choices[0]
     }
-}
+
     

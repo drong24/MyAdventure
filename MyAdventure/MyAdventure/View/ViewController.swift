@@ -13,15 +13,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var ButtonOneText: UIButton!
     @IBOutlet weak var ButtonTwoText: UIButton!
     
-    var currentChoice = StoryLogic().getRoot()
+    var currentChoice = getRoot()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         // Initializes choice tree
-        StoryLogic().addNodes()
+        addNodes()
         
-        let currChoice = StoryLogic().getRoot()
+        let currChoice = getRoot()
         let count = 1 ... 7
         for _ in count {
             print(currChoice.getChoice().getText())
