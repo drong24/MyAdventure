@@ -7,6 +7,7 @@
 
 import Foundation
 
+struct StoryLogic {
     let choices = [
         Node(Choice("You find yourself in a valley surrounded by green hills and wildflowers of all shapes and colors. As you walk through the valley, you hear a distant melody. Following the sound, you see a small sheep standing on a hill, singing a beautiful song.", "Approach the singing sheep", "Observe from a distance"), leaf: false),
         Node(Choice("You decide to approach the singing sheep, drawn in by its melody. As you get closer, the sheep suddenly notices you. Startled, it stops singing and looks at you with wide eyes. Before you can say anything, the sheep bolts away into the forest nearby.", "Follow the sheep", "Start singing"), leaf: false),
@@ -23,15 +24,14 @@ import Foundation
             if (i < (choices.count + 1) / 2) {
                 choices[i - 1].setLeft(node: choices[i * 2 - 1])
                 choices[i - 1].setRight(node: choices[i * 2])
-                print(choices[i - 1].left?.value.text ?? "none")
-                print(choices[i - 1].right?.value.text ?? "none")
             }
         }
     }
     func getRoot() -> Node<Choice> {
-        print("GET ROOT" + (choices[0].left?.value.text ?? "None"))
-        print("GET ROOT" + (choices[0].right?.value.text ?? "None"))
         return choices[0]
     }
+}
+
+
 
     

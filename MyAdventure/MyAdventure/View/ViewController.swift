@@ -13,24 +13,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var ButtonOneText: UIButton!
     @IBOutlet weak var ButtonTwoText: UIButton!
     
-    var currentChoice = getRoot()
+    var storylogic = StoryLogic()
+    var currentChoice = Node(Choice("placeholder"), leaf: false)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         // Initializes choice tree
-        addChildNodes()
+        storylogic.addChildNodes()
+        // Set root node
+        currentChoice = storylogic.getRoot()
         
-        let currChoice = getRoot()
-        let count = 1 ... 7
-        for _ in count {
-            print(currChoice.getChoice().getText())
-            print(currChoice.left?.value.text ?? "None")
-            print(currChoice.right?.value.text ?? "None")
-        }
-         
-        
-        // displays root node text on screen
+        // displays root node text and options on screen
         MainText.text = currentChoice.value.text
         ButtonOneText.setTitle(currentChoice.value.option_one, for: .normal)
         ButtonTwoText.setTitle(currentChoice.value.option_two, for: .normal)
