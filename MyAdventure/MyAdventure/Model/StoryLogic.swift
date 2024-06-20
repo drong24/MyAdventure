@@ -17,7 +17,7 @@ import Foundation
         Node(Choice("You decide to continue on your journey, reflecting on this odd encounter."), leaf: true)
     ]
     
-    func addNodes() {
+    func addChildNodes() {
         let count = 1 ... choices.count
         for i in count {
             if (i < (choices.count + 1) / 2) {

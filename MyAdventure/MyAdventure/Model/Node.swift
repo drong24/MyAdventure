@@ -24,14 +24,6 @@ class Node<Choice> {
         return self.value
     }
     
-    func moveLeft() -> Node<Choice> {
-        return self.left!
-    }
-    
-    func moveRight() -> Node<Choice> {
-        return self.right!
-    }
-    
     func setLeft(node: Node<Choice>) {
         self.left = node
     }

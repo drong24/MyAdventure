@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         // Initializes choice tree
-        addNodes()
+        addChildNodes()
         
         let currChoice = getRoot()
         let count = 1 ... 7
@@ -37,15 +37,15 @@ class ViewController: UIViewController {
     }
 
     @IBAction func chooseChoice(_ sender: UIButton) {
-        currentChoice = (sender.titleLabel?.text == currentChoice.value.option_one) ? currentChoice.left! : currentChoice.right!
+        currentChoice = (sender.titleLabel?.text == currentChoice.getChoice().getOptionOne()) ? currentChoice.left! : currentChoice.right!
         
         if (currentChoice.leaf == false) {
-            MainText.text = currentChoice.value.text
-            ButtonOneText.setTitle(currentChoice.value.option_one, for: .normal)
-            ButtonTwoText.setTitle(currentChoice.value.option_two, for: .normal)
+            MainText.text = currentChoice.getChoice().getText()
+            ButtonOneText.setTitle(currentChoice.getChoice().getOptionOne(), for: .normal)
+            ButtonTwoText.setTitle(currentChoice.getChoice().getOptionTwo(), for: .normal)
         }
         else {
-            MainText.text = currentChoice.value.text
+            MainText.text = currentChoice.getChoice().getText()
             ButtonOneText.setTitle("end", for: .normal)
             ButtonOneText.isEnabled = false
             ButtonTwoText.setTitle("end", for: .normal)
